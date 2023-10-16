@@ -21,8 +21,6 @@ public class FizzBuzz {
     }
 
     public static String fizzBuzzRecursive(int n){
-        //fizzBuzzRecursive(n-1);
-
         if (n==1) return "1 ";
         else if(n%3==0 && n%5==0) return fizzBuzzRecursive(n-1) + "FizzBuzz ";
         else if (n%3==0) return fizzBuzzRecursive(n-1) + "Fizz ";
