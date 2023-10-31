@@ -6,20 +6,24 @@ class Solution {
     public static char mostFrequentChar(String s) {
       Map<Character,Integer> hashMap = new HashMap<>();
       
+      //Add letters into hashmap w/ frequency 
       for(int i = 0; i< s.length(); i++){
         char c = s.charAt(i);
         if(hashMap.containsKey(c)) hashMap.replace(c,hashMap.get(c)+1);
         else hashMap.put(c, 1);
       }
 
+      //Iterate over string to get the most frequent letter 
       int frequency = 0; 
       char mostFreqentChar = 0;  
       for(int i = 0; i< s.length(); i++){
-        if(hashMap.get(s.charAt(i))>frequency){
-          frequency = hashMap.get(s.charAt(i)); 
-          mostFreqentChar = s.charAt(i); 
+        char c = s.charAt(i);
+        if(hashMap.get(c)>frequency){
+          frequency = hashMap.get(c); 
+          mostFreqentChar = c; 
         }
       }
+      
       return mostFreqentChar;
     }
   
