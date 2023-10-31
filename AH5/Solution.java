@@ -5,7 +5,7 @@ import java.util.Set;
 
 class Solution {
     public static char mostFrequentChar(String s) {
-      Map<Character,Integer> hashMap = new HashMap(); 
+      Map<Character,Integer> hashMap = new HashMap();
       
       for(int i = 0; i< s.length(); i++){
         char c = s.charAt(i);
